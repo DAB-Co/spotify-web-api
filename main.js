@@ -38,7 +38,7 @@ app.get("/", async function (req, res) {
         const config = {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + (Buffer.from(access_token).toString('base64'))
+                'Authorization': 'Bearer ' + access_token
             }
         };
 
@@ -46,7 +46,7 @@ app.get("/", async function (req, res) {
 
         await axios.get('https://api.spotify.com/v1/me/top/artists', config)
             .then(function (response) {
-                user_data["artists"] = response;
+                user_data["artists"] = response.data;
             })
             .catch(function (error) {
                 console.log(error.response.status, error.response.statusText);
@@ -62,17 +62,15 @@ app.get("/", async function (req, res) {
             attempt_count++;
             return res.redirect("/refresh_access_token");
         }
-        /*
+
         await axios.get('https://api.spotify.com/v1/me/top/tracks', config)
             .then(function (response) {
-                user_data["tracks"] = response;
+                user_data["tracks"] = response.data;
             })
             .catch(function (error) {
                 console.log(error.response.status, error.response.statusText);
                 console.log(error.response.headers);
             });
-
-         */
 
         attempt_count = 0;
         res.send(user_data);
