@@ -55,7 +55,8 @@ app.get("/", async function (req, res) {
             });
 
         if (g_error !== undefined && attempt_count > 0) {
-            return res.send(g_error);
+            res.send(g_error);
+            process.exit();
         }
         else if (g_error !== undefined ) {
             attempt_count++;
