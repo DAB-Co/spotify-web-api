@@ -12,6 +12,11 @@ posting to get the refresh token.
 - App redirects user to spotify login page for authorization
 - Upon authorization, login page calls http://localhost:41372/login_callback with the code required to get the
 refresh token.
-- From here a post request is made to get the refresh token. This refresh token can be used indefinitely to request an
+- From here a post request needs to be made(by the app) to get the refresh token. This refresh token can be used indefinitely to request an
 access token. Access token is used for api calls.
 - If there is an error with the refresh token, go back to step 1 to have to user login again.
+
+## Sources
+- https://developer.spotify.com/documentation/general/guides/authorization/code-flow/
+- https://developer.spotify.com/documentation/general/guides/authorization/use-access-token/
+- https://developer.spotify.com/documentation/general/guides/authorization/scopes/
