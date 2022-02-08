@@ -22,8 +22,8 @@ access token. Access token is used for api calls.
 - https://developer.spotify.com/documentation/general/guides/authorization/scopes/
 
 ## Steps for implementing in mobile
-- Create a webpage for handling getting the refresh and access token
-- Render the webpage in mobile
+- Create a webpage in server for handling getting the refresh and access token
+- Render the webpage in mobile by requesting from server
 - After user is done, the webpage will send tokens as response and webpage can be closed
 - store refresh_token and access_token
 - use the access token to make necessary api calls
