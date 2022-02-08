@@ -20,3 +20,4 @@ access token. Access token is used for api calls.
 - https://developer.spotify.com/documentation/general/guides/authorization/code-flow/
 - https://developer.spotify.com/documentation/general/guides/authorization/use-access-token/
 - https://developer.spotify.com/documentation/general/guides/authorization/scopes/
+- [running a server in mobile?](https://medium.com/@naik.rpsn/http-server-running-on-a-mobile-app-with-flutter-1ef1e717dda1)
