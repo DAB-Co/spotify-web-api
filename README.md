@@ -20,4 +20,12 @@ access token. Access token is used for api calls.
 - https://developer.spotify.com/documentation/general/guides/authorization/code-flow/
 - https://developer.spotify.com/documentation/general/guides/authorization/use-access-token/
 - https://developer.spotify.com/documentation/general/guides/authorization/scopes/
-- [running a server in mobile?](https://medium.com/@naik.rpsn/http-server-running-on-a-mobile-app-with-flutter-1ef1e717dda1)
+
+## Steps for implementing in mobile
+- Create a webpage for handling getting the refresh and access token
+- Render the webpage in mobile
+- After user is done, the webpage will send tokens as response and webpage can be closed
+- store refresh_token and access_token
+- use the access token to make necessary api calls
+- if an error occurs use refresh token to request new access token
+- if an error occurs again while requesting new access token via refresh token, render the webpage again
