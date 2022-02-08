@@ -1,0 +1,25 @@
+{
+  "name": "spotify-web-api",
+  "version": "0.1.0",
+  "description": "node js spotify web api wrapper",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAB-Co/spotify-web-api.git"
+  },
+  "author": "Deniz Cakiroglu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DAB-Co/spotify-web-api/issues"
+  },
+  "homepage": "https://github.com/DAB-Co/spotify-web-api#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "query-string": "^7.1.1"
+  }
+}
