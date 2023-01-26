@@ -5,7 +5,7 @@
 and the refresh token is used to fetch the access token. Access tokens usually expire after a given timeframe.
 
 ## Getting the access token
-- A local server listening to http://localhost:41372/login_callback needs to set up to get the code required for 
+- A local server listening to http://localhost:41372/login_callback (or any other callback link set in the api portal) needs to set up to get the code required for 
 posting to get the refresh token.
 
 ## Summary
